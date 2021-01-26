@@ -1,9 +1,9 @@
-import React from 'react'
-import './form-input.styles.scss'
+import React from 'react';
 
-export default function FormInput({handleChange, label, ...otherProps}) {
-  return (
-    <div className='group'>
+import './form-input.styles.scss';
+
+const FormInput = ({ handleChange, label, ...otherProps }) => (
+  <div className='group'>
     <input className='form-input' onChange={handleChange} {...otherProps} />
     {label ? (
       <label
@@ -15,5 +15,6 @@ export default function FormInput({handleChange, label, ...otherProps}) {
       </label>
     ) : null}
   </div>
-  )
-}
+);
+
+export default FormInput;
